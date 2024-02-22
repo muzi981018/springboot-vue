@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+ <p>cunn {{currentTime1()}}</p>
+ <p>cunn {{currentTime2}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+var  vm = new Vue({
+  el: "#app",
+  data: {
+    message: "geel"
+  },
+  methods: {
+    currentTime1: function () {
+      return Date.now();
+    }
+  },
+  computed: {
+    currentTime2: function () {
+      return Date.now()
+    }
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<jonee v-for = "item in message" v-bind:ari="item"></jonee>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+
+Vue.component("jonee",{
+  props: ['ari'],
+  template: '<li>{{ari}}</li>'
+})
+var  vm = new Vue({
+  el: "#app",
+  data: {
+    message: ["Java","das","kkk"]
+  }
+});
+</script>
+</body>
+</html>
